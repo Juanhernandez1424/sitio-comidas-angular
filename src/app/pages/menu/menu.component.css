@@ -1,0 +1,47 @@
+ul{
+    list-style: none;
+}
+
+.options-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+
+.options-menu ul{
+    display: flex;
+    gap: 20px;
+}
+
+.list-item button{
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-todos{
+    background-color: rgb(15, 99, 237);
+    color: #fff;
+}
+
+.cards{
+    position: relative;
+    /* background-color: blue; */
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 500px;
+    
+}
