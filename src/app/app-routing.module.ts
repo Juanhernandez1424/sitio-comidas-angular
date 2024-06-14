@@ -7,6 +7,11 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'principal',
+    pathMatch: 'full',
+  },
+  {
     path: 'principal',
     component: PrincipalComponent,
   },

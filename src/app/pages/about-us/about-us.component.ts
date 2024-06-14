@@ -51,7 +51,7 @@ export class AboutUsComponent implements OnInit {
   }
 
   limpiar() {
-    (this.txt_nombre = ''), this.cambiarEstilo('', '', '');
+    this.txt_nombre = '';
     this.txt_correo = '';
     this.txt_comentario = '';
   }
