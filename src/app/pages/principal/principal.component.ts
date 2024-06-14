@@ -8,6 +8,6 @@ import { AboutUsComponent } from '../about-us/about-us.component';
 })
 export class PrincipalComponent {
   pageAbout() {
-    window.location.href = '/about-us';
+    window.location.href = '/menu';
   }
 }

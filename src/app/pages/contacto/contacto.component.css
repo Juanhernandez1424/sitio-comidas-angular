@@ -1,0 +1,142 @@
+input{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container  {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    position: relative;
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.logo-delifast{
+    position: relative;
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 50px;
+}
+
+.info-form{
+    padding-left: 5%;
+}
+
+.info-form h2{
+    font-size: 3rem;
+}
+
+.datos-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.datos-cliente{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.nombre-cliente{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.apellido-cliente{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.datos-cliente input{
+    width: 336px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid rgb(161, 162, 168);
+    outline: none;
+    padding: 4%;
+    text-align: left;
+}
+
+.comentario-cliente{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.correo-cliente{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.correo-cliente input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid rgb(161, 162, 168);
+    outline: none;
+    padding: 2%;
+    text-align: left;
+}
+
+.mensaje-cliente{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.mensaje-cliente input{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid rgb(161, 162, 168);
+    outline: none;
+    padding: 2%;
+}
+
+.btn{
+    width: 100%;
+    height: 50px;
+}
+
+.btn button{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 99, 237);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 1rem;
+    &:hover {
+        background-color: rgba(15, 99, 237, 0.9);
+        transition: .5s;
+    }
+}

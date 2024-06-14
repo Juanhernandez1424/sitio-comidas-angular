@@ -1,4 +1,49 @@
 <app-nav></app-nav>
 <div class="container">
-  <p>Contacto</p>
+  <div class="formulario">
+    <form action="" class="form">
+      <div class="info-form">
+        <h2>Contáctanos</h2>
+        <p>Cuéntanos ¿cómo te podemos ayudar?</p>
+      </div>
+      <div class="datos-form">
+        <div class="datos-cliente">
+          <div class="nombre-cliente">
+            <label>Nombre</label>
+            <input type="text" name="nombre" placeholder="Nombre" />
+          </div>
+          <div class="apellido-cliente">
+            <label>Apellido</label>
+            <input type="text" name="Apellido" placeholder="Apellido" />
+          </div>
+        </div>
+        <div class="comentario-cliente">
+          <div class="correo-cliente">
+            <label>Correo</label>
+            <input
+              type="email"
+              name="Correo"
+              placeholder="ejemplo@ejemplo.com"
+            />
+          </div>
+          <div class="mensaje-cliente">
+            <label for="mensaje_cliente">Mensaje</label>
+            <input
+              type="text"
+              name="mensaje"
+              id="mensaje_cliente"
+              placeholder="¿Cómo te podemos ayudar?"
+            />
+          </div>
+        </div>
+        <div class="btn">
+          <button type="submit">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="logo-delifast">
+    <img src="../assets/images/DeliFastLogo.png" alt="logo" />
+  </div>
 </div>
+<app-footer></app-footer>
