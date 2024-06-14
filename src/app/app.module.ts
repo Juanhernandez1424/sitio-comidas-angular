@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { CardsComponent } from './components/cards/cards.component';
     ContactoComponent,
     CardsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

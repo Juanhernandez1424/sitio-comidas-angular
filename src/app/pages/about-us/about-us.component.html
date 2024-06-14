@@ -19,56 +19,54 @@
     <p>Conoce los testimonios de nuestros clientes</p>
   </div>
   <div class="cartas-valoracion" id="cartas-valoracion">
-    <div class="carta">
-      <h5>"Excelentes precios"</h5>
+    <div class="carta" *ngFor="let comentario of comentarios">
+      <h5>"{{ comentario.com }}"</h5>
       <div class="usuario-carta">
-        <p><b>Juan Perez</b></p>
-        <p><span>juanmail.com</span></p>
-      </div>
-    </div>
-    <div class="carta">
-      <h5>"Excelentes precios"</h5>
-      <div class="usuario-carta">
-        <p><b>Juan Perez</b></p>
-        <p>juangmail.com</p>
-      </div>
-    </div>
-    <div class="carta">
-      <h5>"Excelentes precios"</h5>
-      <div class="usuario-carta">
-        <p><b>Juan Perez</b></p>
-        <p>juangmail.com</p>
-      </div>
-    </div>
-    <div class="carta">
-      <h5>"Excelentes precios"</h5>
-      <div class="usuario-carta">
-        <p><b>Juan Perez</b></p>
-        <p>juangmail.com</p>
+        <p>
+          <b>{{ comentario.nombre }}</b>
+        </p>
+        <p>
+          <span>{{ comentario.correo }}</span>
+        </p>
       </div>
     </div>
   </div>
   <div class="container-formulario">
-    <form action="" class="form" id="form" onsubmit="return false">
+    <form class="form" (ngSubmit)="agregarComentario()">
       <h3>Dejanos tus comentarios</h3>
       <div class="input-form">
         <div class="info-cliente">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="txt_nombre" placeholder="Nombre" />
-          <label for="correo">Correo</label>
-          <input type="text" id="txt_correo" placeholder="Correo" />
-        </div>
-        <div class="comentario-cliente">
-          <label for="nombre">Comentarios</label>
+          <label for="txt_nombre">Nombre</label>
           <input
             type="text"
-            id="txt_comentario"
+            name="txt_nombre"
+            class="nombre"
+            #nombreInput
+            placeholder="Nombre"
+            [(ngModel)]="txt_nombre"
+          />
+          <label for="txt_correo">Correo</label>
+          <input
+            type="text"
+            name="txt_correo"
+            class="correo"
+            placeholder="Correo"
+            [(ngModel)]="txt_correo"
+          />
+        </div>
+        <div class="comentario-cliente">
+          <label for="text_comentario">Comentarios</label>
+          <input
+            type="text"
+            name="txt_comentario"
+            class="comentario"
             placeholder="Ingresa tú comentario"
+            [(ngModel)]="txt_comentario"
           />
         </div>
       </div>
       <div class="btn-enviar">
-        <button class="enviar-comentario" id="enviar-comentario">Enviar</button>
+        <button class="enviar-comentario">Enviar</button>
       </div>
     </form>
   </div>
