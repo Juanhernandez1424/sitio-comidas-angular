@@ -1,30 +1,61 @@
 <app-nav></app-nav>
+
 <div class="container">
   <div class="options-menu">
     <h2>Menú</h2>
     <div class="btns-menu">
       <ul class="list-btn">
         <li class="list-item">
-          <button class="btn btn-todos" id="ver-todos">Ver Todos</button>
+          <button
+            class="btn btn-todos"
+            [ngClass]="mostrarBoton('todos')"
+            (click)="verTodos()"
+          >
+            Ver Todos
+          </button>
         </li>
         <li class="list-item">
-          <button class="btn btn-header burgers" id="burguers">
+          <button
+            class="btn btn-header burgers"
+            [ngClass]="mostrarBoton('burgers')"
+            (click)="filtroCategoria('burgers')"
+          >
             Hamburguesas
           </button>
         </li>
         <li class="list-item">
-          <button class="btn btn-header pizzas" id="pizzas">Pizzas</button>
+          <button
+            class="btn btn-header pizzas"
+            [ngClass]="mostrarBoton('pizzas')"
+            (click)="filtroCategoria('pizzas')"
+          >
+            Pizzas
+          </button>
         </li>
         <li class="list-item">
-          <button class="btn btn-header perros" id="perros-calientes">
+          <button
+            class="btn btn-header perros"
+            [ngClass]="mostrarBoton('perro-caliente')"
+            (click)="filtroCategoria('perro-caliente')"
+          >
             Perros Calientes
           </button>
         </li>
         <li class="list-item">
-          <button class="btn btn-header bebidas" id="bebidas">Bebidas</button>
+          <button
+            class="btn btn-header bebidas"
+            [ngClass]="mostrarBoton('bebidas')"
+            (click)="filtroCategoria('bebidas')"
+          >
+            Bebidas
+          </button>
         </li>
         <li class="list-item">
-          <button class="btn btn-header adiciones" id="adiciones">
+          <button
+            class="btn btn-header adiciones"
+            [ngClass]="mostrarBoton('adiciones')"
+            (click)="filtroCategoria('adiciones')"
+          >
             Adiciones
           </button>
         </li>
@@ -32,15 +63,9 @@
     </div>
   </div>
 
-  <div class="cards">
-    <div class="card">
-      <app-cards></app-cards>
-    </div>
-    <div class="card">
-      <app-cards></app-cards>
-    </div>
-    <div class="card">
-      <app-cards></app-cards>
+  <div class="cards-list">
+    <div class="cards">
+      <app-cards *ngFor="let card of filterCardsData" [card]="card"></app-cards>
     </div>
   </div>
 </div>

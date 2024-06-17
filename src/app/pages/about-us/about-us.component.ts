@@ -17,7 +17,8 @@ export class AboutUsComponent implements OnInit {
   txt_correo: string = '';
   txt_comentario: string = '';
 
-  @ViewChild('nombreInput') nombreInput!: ElementRef;
+  @ViewChild('nombreInput')
+  nombreInput!: ElementRef;
 
   comentarios: Comentario[] = [
     new Comentario('Juan', 'juan@prueba.com', 'Excelente Servicio'),
@@ -29,10 +30,12 @@ export class AboutUsComponent implements OnInit {
 
   mostrarComentarios() {}
 
+  validarCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   agregarComentario() {
     if (
       this.txt_nombre !== '' &&
-      this.txt_correo !== '' &&
+      this.validarCorreo.test(this.txt_correo) &&
       this.txt_comentario !== ''
     ) {
       let comentario = new Comentario(
@@ -52,15 +55,20 @@ export class AboutUsComponent implements OnInit {
 
   limpiar() {
     this.txt_nombre = '';
+    this.cambiarEstilo('.nombre', 'borderColor', '');
     this.txt_correo = '';
     this.txt_comentario = '';
   }
 
   onNombreInput(event: Event) {
     const inputElement = event.target as HTMLInputElement;
-    // this.cambiarEstilo(this.nombreInput.nativeElement, 'borderColor', '');
+    this.cambiarEstilo(this.nombreInput.nativeElement, 'borderColor', '');
     if (inputElement.value.length > 0) {
-      this.cambiarEstilo('.nombre', 'borderColor', 'green');
+      this.cambiarEstilo(
+        this.nombreInput.nativeElement,
+        'borderColor',
+        'green'
+      );
     }
   }
 

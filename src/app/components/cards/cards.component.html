@@ -1,11 +1,22 @@
 <div class="cards">
   <div class="card">
     <div class="title-card">
-      <h4>Product</h4>
+      <h4>{{ card.title }}</h4>
+      <img src="{{ card.image }}" alt="back-product" />
     </div>
     <div class="info-card">
-      <h5>Product</h5>
-      <p>Info</p>
+      <div class="info">
+        <h5>{{ card.option }}</h5>
+        <p>{{ card.description }}</p>
+      </div>
+    </div>
+    <div class="precio-carrito">
+      <div class="precio">
+        <p>$ {{ card.precio }}</p>
+      </div>
+      <div class="btn">
+        <button class="btn_agregar-producto">+</button>
+      </div>
     </div>
   </div>
 </div>
