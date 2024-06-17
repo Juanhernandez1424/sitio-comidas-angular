@@ -36,23 +36,28 @@
       <h3>Dejanos tus comentarios</h3>
       <div class="input-form">
         <div class="info-cliente">
-          <label for="txt_nombre">Nombre</label>
-          <input
-            type="text"
-            name="txt_nombre"
-            class="nombre"
-            #nombreInput
-            placeholder="Nombre"
-            [(ngModel)]="txt_nombre"
-          />
-          <label for="txt_correo">Correo</label>
-          <input
-            type="text"
-            name="txt_correo"
-            class="correo"
-            placeholder="Correo"
-            [(ngModel)]="txt_correo"
-          />
+          <div class="nombre-cliente">
+            <label for="txt_nombre">Nombre</label>
+            <input
+              type="text"
+              name="txt_nombre"
+              class="nombre"
+              #nombreInput
+              placeholder="Nombre"
+              [(ngModel)]="txt_nombre"
+              (input)="onNombreInput($event)"
+            />
+          </div>
+          <div class="correo cliente">
+            <label for="txt_correo">Correo</label>
+            <input
+              type="text"
+              name="txt_correo"
+              class="correo"
+              placeholder="Correo"
+              [(ngModel)]="txt_correo"
+            />
+          </div>
         </div>
         <div class="comentario-cliente">
           <label for="text_comentario">Comentarios</label>
@@ -71,3 +76,4 @@
     </form>
   </div>
 </div>
+<app-footer></app-footer>
