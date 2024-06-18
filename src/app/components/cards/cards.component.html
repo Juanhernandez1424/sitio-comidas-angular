@@ -15,7 +15,11 @@
         <p>$ {{ card.precio }}</p>
       </div>
       <div class="btn">
-        <button class="btn_agregar-producto">+</button>
+        <ion-icon
+          name="add-circle"
+          class="btn_agregar-producto"
+          (click)="agregarProductoCarrito()"
+        ></ion-icon>
       </div>
     </div>
   </div>

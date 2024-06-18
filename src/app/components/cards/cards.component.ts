@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class CardsComponent {
   @Input() card: any;
+
+  agregarProductoCarrito() {}
 }

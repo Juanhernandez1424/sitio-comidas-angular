@@ -2,10 +2,15 @@
   <div class="img-logo">
     <img src="../assets/images/DeliFastLogo.png" alt="logo" />
   </div>
-  <div class="nav-bar">
+  <div class="nav-bar" #navBar>
     <a routerLink="/principal">Inicio</a>
     <a routerLink="/about-us">Sobre Nosotros</a>
     <a routerLink="/menu">Menu</a>
     <a href="/contacto">Contacto</a>
+  </div>
+  <div class="nav-bar-media">
+    <div class="menu-hamburguesa">
+      <ion-icon name="menu" (click)="mostrarMenu()"></ion-icon>
+    </div>
   </div>
 </div>

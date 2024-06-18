@@ -74,10 +74,6 @@
 .btn_agregar-producto{
     width: 45px;
     height: 100%;
-    background-color: #000;
-    color: #fff;
     font-size: 2rem;
-    border: none;
-    border-radius: 50%;
     cursor: pointer;
 }
