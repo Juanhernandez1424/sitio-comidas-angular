@@ -47,8 +47,14 @@ export class AboutUsComponent implements OnInit {
       this.limpiar();
     } else {
       alert('Ingrese los datos');
-      if (this.txt_nombre == '') {
+      if (this.txt_nombre === '') {
         this.cambiarEstilo('.nombre', 'borderColor', 'red');
+      }
+      if (this.validarCorreo.test(this.txt_correo) || this.txt_correo === '') {
+        this.cambiarEstilo('.correo', 'borderColor', 'red');
+      }
+      if (this.txt_comentario === '') {
+        this.cambiarEstilo('.comentario', 'borderColor', 'red');
       }
     }
   }
@@ -61,15 +67,15 @@ export class AboutUsComponent implements OnInit {
   }
 
   onNombreInput(event: Event) {
-    const inputElement = event.target as HTMLInputElement;
-    this.cambiarEstilo(this.nombreInput.nativeElement, 'borderColor', '');
-    if (inputElement.value.length > 0) {
-      this.cambiarEstilo(
-        this.nombreInput.nativeElement,
-        'borderColor',
-        'green'
-      );
-    }
+    // const inputElement = event.target as HTMLInputElement;
+    // this.cambiarEstilo(this.nombreInput.nativeElement, 'borderColor', '');
+    // if (inputElement.value.length > 0) {
+    //   this.cambiarEstilo(
+    //     this.nombreInput.nativeElement,
+    //     'borderColor',
+    //     'green'
+    //   );
+    // }
   }
 
   // Método para cambiar el valor css de un elemento

@@ -4,7 +4,7 @@
   <div class="options-menu">
     <h2>Menú</h2>
     <div class="btns-menu">
-      <ul class="list-btn">
+      <ul class="list-btn" #listBtn>
         <li class="list-item">
           <button
             class="btn btn-todos"
@@ -61,11 +61,12 @@
         </li>
       </ul>
     </div>
-    <div class="menu-hamburguesa">
+  </div>
+
+  <div class="actions">
+    <app-compras></app-compras>
+    <div class="menu-hamburguesa" (click)="mostrarBotonesFiltro()">
       <ion-icon name="menu"></ion-icon>
-    </div>
-    <div class="carrito-compras">
-      <ion-icon name="cart-outline"></ion-icon>
     </div>
   </div>
 

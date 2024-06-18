@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, viewChild } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -109,5 +109,10 @@ export class MenuComponent {
 
   mostrarBoton(categoria: string) {
     return this.categoriaSeleccionada === categoria ? 'btn-background' : '';
+  }
+
+  @ViewChild('listBtn') listBtn!: ElementRef;
+  mostrarBotonesFiltro() {
+    this.listBtn.nativeElement.classList.toggle('active');
   }
 }

@@ -68,6 +68,30 @@
     transform: translateY(5px);
 }
 
+@media (max-width: 900px){
+    .nav-bar{
+        position: absolute;
+        background-color: rgba(15, 99, 237, 0.95);
+        top: 150px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        display: none;
+    }
+
+    .nav-bar.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .menu-hamburguesa{
+        display: block;
+    }
+}
 
 @media (max-width: 500px) {
 

@@ -26,3 +26,8 @@
     color: rgb(83, 83, 83);
     font-size: 1.5rem;
 }
+
+.redes{
+    display: flex;
+    gap: 10px;
+}
