@@ -1,6 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -11,6 +10,7 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { FormsModule } from '@angular/forms';
+import { ComprasComponent } from './components/compras/compras.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +22,10 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     ContactoComponent,
     CardsComponent,
+    ComprasComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [ComprasComponent],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
